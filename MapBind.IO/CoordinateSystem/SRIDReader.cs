@@ -68,7 +68,7 @@ namespace MapBind.IO.CoordinateSystem
 			{
 				if (wkt.WKID == id)
 				{
-					return CoordinateSystemWktReader.Parse(wkt.WKT) as ICoordinateSystem;
+					return CoordinateSystemWktReader.Parse(wkt.WKT, System.Text.ASCIIEncoding.UTF8) as ICoordinateSystem;
 				}
 			}
 			return null;

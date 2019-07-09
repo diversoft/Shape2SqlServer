@@ -1,23 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using GeoAPI.Geometries;
-using System.Text.RegularExpressions;
-using System.Data;
 using Microsoft.SqlServer.Types;
 using System.Data.SqlTypes;
-using System.Globalization;
-using NetTopologySuite.Geometries;
 using System.Diagnostics;
 using NetTopologySuite.IO;
 using MapBind.Data.Models.SqlServer;
 using MapBind.Data.Models;
-
+using GeoAPI.Geometries;
 
 namespace MapBind.IO
 {
-	internal static class SqlServerHelper
+    internal static class SqlServerHelper
 	{
 
 		private const double INVALIDGEOM_BUFFER = 0.000001d;

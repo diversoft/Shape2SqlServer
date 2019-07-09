@@ -7,23 +7,22 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Threading;
-using GeoAPI.Geometries;
 using MapBind.Data.Models;
 using MapBind.Data.Models.BingMaps;
 using MapBind.Data.Models.CoordinateConverters;
 using MapBind.Data.Models.Raster;
 using MapBind.Data.Models.SqlServer;
 using Microsoft.SqlServer.Types;
-using MapBind.Data.Models.Geometry;
 using MapBind.Data.Models.GeometryWriter;
 using MapBind.Data.Models.Style;
+using GeoAPI.Geometries;
 
 namespace MapBind.Data.Business
 {
-	/// <summary>
-	/// This is a lightweight class that handles on the fly raster images generation
-	/// </summary>
-	public sealed class BitmapDataService
+    /// <summary>
+    /// This is a lightweight class that handles on the fly raster images generation
+    /// </summary>
+    public sealed class BitmapDataService
 	{
 		TraceSource _trace = new TraceSource("MapBind.Data");
 

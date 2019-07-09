@@ -141,8 +141,8 @@ namespace MapBind.IO.ShapeFile
 					{
 						//string v_targetCoordSys =  "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]";
 
-						ICoordinateSystem csSource = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(this.CoordinateSystem) as ICoordinateSystem;
-						ICoordinateSystem csTarget = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(targetCoordSystem) as ICoordinateSystem;
+						ICoordinateSystem csSource = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(this.CoordinateSystem, System.Text.ASCIIEncoding.UTF8) as ICoordinateSystem;
+						ICoordinateSystem csTarget = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(targetCoordSystem, System.Text.ASCIIEncoding.UTF8) as ICoordinateSystem;
 
 						_transform = new CoordinateTransformationFactory().CreateFromCoordinateSystems(csSource, csTarget);
 					}
@@ -444,8 +444,8 @@ namespace MapBind.IO.ShapeFile
 					{
 						//string v_targetCoordSys =  "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]";
 
-						ICoordinateSystem csSource = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(this.CoordinateSystem) as ICoordinateSystem;
-						ICoordinateSystem csTarget = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(targetCoordSystem) as ICoordinateSystem;
+						ICoordinateSystem csSource = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(this.CoordinateSystem, System.Text.ASCIIEncoding.UTF8) as ICoordinateSystem;
+						ICoordinateSystem csTarget = ProjNet.Converters.WellKnownText.CoordinateSystemWktReader.Parse(targetCoordSystem, System.Text.ASCIIEncoding.UTF8) as ICoordinateSystem;
 
 						_transform = new CoordinateTransformationFactory().CreateFromCoordinateSystems(csSource, csTarget);
 					}

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using GeoAPI.Geometries;
+﻿using GeoAPI.Geometries;
+using System;
 
 namespace MapBind.IO.ShapeFile
 {
-	public sealed class ShapeImportExceptionEventArgs : UnhandledExceptionEventArgs
+    public sealed class ShapeImportExceptionEventArgs : UnhandledExceptionEventArgs
 	{
 		private string _shapeInfo;
 		public string ShapeInfo { get { return _shapeInfo; } }

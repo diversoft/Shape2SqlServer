@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.SqlServer.Types;
 using NetTopologySuite.Index.Strtree;
-using GeoAPI.Geometries;
 using System.Data.SqlClient;
 using MapBind.Data.Models.SqlServer;
 using System.Diagnostics;
-using System.Threading;
-using MapBind.Data.Models;
-
+using GeoAPI.Geometries;
 
 namespace MapBind.Data.Business
 {
-	internal static class GeometryCache
+    internal static class GeometryCache
 	{
 		private static Dictionary<string, Dictionary<int, SqlGeometry>> _geomCacheByTableThenId = new Dictionary<string, Dictionary<int, SqlGeometry>>();
 		private static Dictionary<string, Dictionary<int, double>> _geomEnvelopeAreaCacheByTableThenId = new Dictionary<string, Dictionary<int, double>>();

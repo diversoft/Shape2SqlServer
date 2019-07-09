@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using MapBind.Data.Models;
 using MapBind.Data.Models.GeometryWriter;
 using Microsoft.SqlServer.Types;
 using MapBind.Data.Models.SqlServer;
-using GeoAPI.Geometries;
 using System.Diagnostics;
 using System.Data.SqlClient;
 using System.Configuration;
+using GeoAPI.Geometries;
 
 namespace MapBind.Data.Business
 {
-	public sealed class DataService
+    public sealed class DataService
 	{
 
 		#region Properties
